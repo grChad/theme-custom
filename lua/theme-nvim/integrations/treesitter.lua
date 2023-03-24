@@ -111,6 +111,8 @@ return {
 	-- Language specific:
 	-- markdown
 	['@conceal'] = { bold = true },
+	['@text.todo.unchecked'] = { bold = true, bg = 'None', fg = cp.whiteSmoke },
+	['@text.todo.checked'] = { bold = true, bg = 'None', fg = cp.yellow },
 
 	-- toml
 	['@property.toml'] = { fg = cp.red, bold = true }, -- Differentiates between string and properties
