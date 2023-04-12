@@ -18,7 +18,7 @@ return {
 	Substitute = { bg = cp.surface1, fg = cp.pink }, -- |:substitute| replacement text highlighting
 	LineNr = { fg = cp.overlay1 },
 	CursorLineNR = { fg = cp.orange, bold = true },
-	MatchParen = { fg = cp.whiteSmoke, bg = cp.red }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+	MatchParen = { fg = cp.orange, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 	ModeMsg = { fg = cp.text, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
 	MsgArea = { fg = cp.text }, -- Area for messages and cmdline
 	MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
