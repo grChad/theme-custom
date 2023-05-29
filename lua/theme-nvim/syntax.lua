@@ -1,12 +1,13 @@
 local cp = require('theme-nvim.palletes.frappe')
+
 return {
-	Comment = { fg = cp.surface2 }, -- just comments
+	Comment = { fg = cp.overlay1 }, -- just comments
 	Constant = { fg = cp.peach }, -- (preferred) any constant
 	String = { fg = cp.green }, -- a string constant: "this is a string"
 	Character = { fg = cp.teal }, --  a character constant: 'c', '\n'
 	Number = { fg = cp.peach }, --   a number constant: 234, 0xff
 	Float = { fg = cp.peach }, --    a floating point constant: 2.3e10
-	Boolean = { fg = cp.peach }, --  a boolean constant: TRUE, false
+	Boolean = { fg = cp.red, style = { 'italic', 'bold' } },
 	Identifier = { fg = cp.flamingo }, -- (preferred) any variable name
 	Function = { fg = cp.blue }, -- function name (also: methods for classes)
 	Statement = { fg = cp.mauve }, -- (preferred) any statement
@@ -30,28 +31,27 @@ return {
 	Type = { fg = cp.blue }, -- (preferred) int, long, char, etcp.
 	-- SpecialChar   = { }, --  special character in a constant
 	-- Tag           = { }, --    you can use CTRL-] on this
-	-- Delimiter     = { }, --  character that needs attention
 	-- Specialoverlay0= { }, -- special things inside a overlay0
 	-- Debug         = { }, --    debugging statements
 
-	Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
-	Bold = { bold = true },
-	Italic = { italic = true },
+	Underlined = { style = { 'underline' } }, -- (preferred) text that stands out, HTML links
+	Bold = { style = { 'bold' } },
+	Italic = { style = { 'italic' } },
 	-- ("Ignore", below, may be invisible...)
 	-- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
 	Error = { fg = cp.red }, -- (preferred) any erroneous construct
-	Todo = { bg = cp.yellow, fg = cp.base, bold = true }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+	Todo = { bg = cp.yellow, fg = cp.base, style = { 'bold' } }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 	qfLineNr = { fg = cp.yellow },
 	qfFileName = { fg = cp.blue },
-	htmlH1 = { fg = cp.pink, bold = true },
-	htmlH2 = { fg = cp.blue, bold = true },
+	htmlH1 = { fg = cp.pink, style = { 'bold' } },
+	htmlH2 = { fg = cp.blue, style = { 'bold' } },
 	-- mkdHeading = { fg = cp.peach, style = { "bold" } },
 	-- mkdCode = { bg = cp.terminal_black, fg = cp.text },
 	mkdCodeDelimiter = { bg = cp.base, fg = cp.text },
-	mkdCodeStart = { fg = cp.flamingo, bold = true },
-	mkdCodeEnd = { fg = cp.flamingo, bold = true },
-	-- mkdLink = { fg = cp.blue, style = { "underline" } },
+	mkdCodeStart = { fg = cp.flamingo, style = { 'bold' } },
+	mkdCodeEnd = { fg = cp.flamingo, style = { 'bold' } },
+	-- mkdLink = {},
 
 	-- debugging
 	debugPC = { bg = cp.crust }, -- used for highlighting the current line in terminal-debug
@@ -96,4 +96,18 @@ return {
 	Delimiter = { link = 'Special' }, -- character that needs attention
 	SpecialComment = { link = 'Special' }, -- special things inside a comment
 	Debug = { link = 'Special' }, -- debugging statements
+
+	-- for [ Zsh ]
+
+	zshVariable = { fg = cp.whiteSmoke },
+	zshVariableDef = { fg = cp.whiteSmoke },
+	zshKeyword = { fg = cp.pink_1 },
+	zshKSHFunction = { fg = cp.red },
+	zshCommands = { fg = cp.teal }, -- pendiente
+	zshOperator = { fg = cp.lavender },
+	zshSubstDelim = { fg = cp.maroon }, -- brackets
+	zshParentheses = { fg = cp.yellow },
+	zshSubst = { fg = cp.blue_0 },
+	zshDeref = { fg = cp.blue_1 },
+	zshShortDeref = { fg = cp.blue_1 },
 }

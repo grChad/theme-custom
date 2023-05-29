@@ -6,47 +6,40 @@ local math_logic = cp.peach
 
 return {
 	-- Misc
-	['@comment'] = { fg = cp.overlay1 },
 	['@error'] = { link = 'Error' },
 	['@preproc'] = { link = 'PreProc' }, -- various preprocessor directives & shebangs
 	['@define'] = { link = 'Define' }, -- preprocessor definition directives
 	['@operator'] = { fg = operators }, -- For any operator: +, but also -> and * in cp.
 
 	-- Punctuation
-	['@punctuation.delimiter'] = { fg = cp.overlay2 }, -- For delimiters ie: .
-	['@punctuation.bracket'] = { fg = cp.overlay2 }, -- For brackets and parenthesis.
-	['@punctuation.special'] = { fg = cp.sky, bold = true }, -- For special punctutation that does not fall in the catagories before.
-
-	-- Literals
-	['@string'] = { fg = cp.green }, -- For strings.
-	['@string.regex'] = { fg = cp.teal }, -- For regexes.
-	['@string.escape'] = { fg = cp.pink }, -- For escape characters within a string.
-	['@string.special'] = { fg = cp.blue }, -- other special strings (e.g. dates)
+	['@punctuation.delimiter'] = { fg = cp.sapphire }, -- For delimiters ie: .
+	['@punctuation.bracket'] = { fg = cp.maroon }, -- For brackets and parenthesis.
+	['@punctuation.special'] = { fg = cp.sky }, -- For special punctutation that does not fall in the catagories before.
 
 	['@character'] = { link = 'Character' }, -- character literals
 	['@character.special'] = { link = 'SpecialChar' }, -- special characters (e.g. wildcards)
 
-	['@boolean'] = { fg = cp.red_1, bold = true }, -- For booleans.
+	['@boolean'] = { fg = cp.orange_1, style = { 'italic' } }, -- For booleans.
 	['@number'] = { fg = math_logic }, -- For all numbers
 	['@float'] = { fg = math_logic }, -- For floats.
 
 	-- Functions
 	['@function'] = { fg = cp.blue_1 }, -- For function (calls and definitions).
-	['@function.builtin'] = { fg = cp.blue_1 }, -- For builtin functions: table.insert in Lua.
 	['@function.call'] = { fg = cp.blue_1 }, -- function calls
+	['@function.builtin'] = { fg = cp.blue_1, style = { 'italic' } }, -- For builtin functions: table.insert in Lua.
 	['@function.macro'] = { fg = cp.teal }, -- For macro defined functions (calls and definitions): each macro_rules in Ruscp.
-	['@method'] = { fg = cp.blue }, -- For method calls and definitions.
 
-	['@method.call'] = { link = '@method' }, -- method calls
+	['@method'] = { fg = cp.sky }, -- For method calls and definitions.
+	['@method.call'] = { style = { 'italic' } }, -- method calls
 
-	['@constructor'] = { fg = cp.sapphire }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
-	['@parameter'] = { fg = cp.maroon }, -- For parameters of a function.
+	['@constructor'] = { fg = cp.yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
+	['@parameter'] = { fg = cp.white, style = { 'italic' } }, -- For parameters of a function.
 
 	-- Keywords
 	['@keyword'] = { fg = cp.pink_1 }, -- For keywords that don't fall in previous categories.
 	['@keyword.function'] = { fg = cp.red }, -- For keywords used to define a fuction.
-	['@keyword.operator'] = { fg = cp.mauve }, -- For new keyword operator
-	['@keyword.return'] = { fg = cp.mauve },
+	['@keyword.operator'] = { fg = cp.lavender, style = { 'bold' } }, -- or, and in lua
+	['@keyword.return'] = { fg = cp.lavender, style = { 'bold' } },
 
 	['@conditional'] = { fg = cl }, -- For keywords related to conditionnals.
 	['@repeat'] = { fg = cl }, -- For keywords related to loops.
@@ -55,82 +48,85 @@ return {
 	['@include'] = { fg = cp.mauve }, -- For includes: #include in C, use or extern crate in Rust, or require in Lua.
 	['@exception'] = { fg = cp.mauve }, -- For exception related keywords.
 
-	-- Types
-
+	-- [ Types ]
 	['@type'] = { fg = cp.yellow }, -- For types.
-	['@type.builtin'] = { fg = cp.yellow, italic = true }, -- For builtin types.
+	['@type.builtin'] = { fg = cp.yellow, style = { 'italic' } }, -- For builtin types.
 	['@type.definition'] = { link = '@type' }, -- type definitions (e.g. `typedef` in C)
 	['@type.qualifier'] = { link = '@type' }, -- type qualifiers (e.g. `const`)
 
 	['@storageclass'] = { link = 'StorageClass' }, -- visibility/life-time/etc. modifiers (e.g. `static`)
 	['@attribute'] = { link = 'Constant' }, -- attribute annotations (e.g. Python decorators)
 	['@field'] = { fg = cp.teal }, -- For fields.
-	['@property'] = { fg = cp.teal }, -- Same as TSField.
+	['@property'] = { fg = cp.sky }, -- Same as TSField.
 
 	-- Identifiers
-
 	['@variable'] = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
-	['@variable.builtin'] = { fg = cp.lavender }, -- Variable names that are defined by the languages, like this or self.
+	['@variable.builtin'] = { fg = cp.blue_0 }, -- Variable names that are defined by the languages, like this or self.
 
 	['@constant'] = { fg = cp.peach }, -- For constants
-	['@constant.builtin'] = { fg = cp.peach }, -- For constant that are built in the language: nil in Lua.
+	['@constant.builtin'] = { fg = cp.red_1, style = { 'italic' } }, -- For constant that are built in the language: nil in Lua.
 	['@constant.macro'] = { fg = cp.mauve }, -- For constants that are defined by macros: NULL in cp.
 
-	['@namespace'] = { fg = cp.blue }, -- For identifiers referring to modules and namespaces.
+	['@namespace'] = { fg = cp.blue_0 }, -- For identifiers referring to modules and namespaces.
 	['@symbol'] = { fg = cp.flamingo },
 
-	-- Text
+	-- [ Literals ]
+	['@string'] = { fg = cp.green }, -- For strings.
+	['@string.regex'] = { fg = cp.teal }, -- For regexes.
+	['@string.escape'] = { fg = cp.pink }, -- For escape characters within a string.
+	['@string.special'] = { fg = cp.blue_0 }, -- other special strings (e.g. dates)
 
+	-- [ Text ]
 	['@text'] = { fg = cp.text }, -- For strings considerated text in a markup language.
-	['@text.strong'] = { fg = cp.peach, bold = true }, -- italic
-	['@text.emphasis'] = { fg = cp.peach, italic = true }, -- bold
+	['@text.strong'] = { fg = cp.flamingo, style = { 'bold' } }, -- bold
+	['@text.emphasis'] = { fg = cp.flamingo, style = { 'italic' } }, -- italic
 	['@text.underline'] = { link = 'Underline' }, -- underlined text
-	['@text.strike'] = { fg = cp.text, strikethrough = true }, -- strikethrough text
-	['@text.title'] = { fg = cp.blue_1, bold = true }, -- titles like: # Example
+	['@text.strike'] = { fg = cp.text, style = { 'strikethrough' } }, -- strikethrough text
+	['@text.title'] = { fg = cp.blue_1, style = { 'bold' } }, -- titles like: # Example
 	['@text.literal'] = { fg = cp.whiteSmoke }, -- used for inline code in markdown and for doc in python (""")
-	['@text.uri'] = { fg = cp.blue, italic = true, underline = true }, -- urls, links and emails
-	['@text.math'] = { fg = cp.blue }, -- math environments (e.g. `$ ... $` in LaTeX)
+	['@text.uri'] = { fg = cp.blue_2, style = { 'italic', 'underline' } }, -- urls, links and emails
+	['@text.math'] = { fg = cp.blue_0 }, -- math environments (e.g. `$ ... $` in LaTeX)
 	['@text.environment'] = { fg = cp.pink }, -- text environments of markup languages
-	['@text.environment.name'] = { fg = cp.blue }, -- text indicating the type of an environment
-	['@text.reference'] = { fg = cp.blue_2 }, -- references
+	['@text.environment.name'] = { fg = cp.blue_0 }, -- text indicating the type of an environment
+	['@text.reference'] = { fg = cp.blue_0 }, -- references
 
-	['@text.todo'] = { bg = cp.yellow }, -- todo notes
-	['@text.note'] = { fg = cp.base, bg = cp.blue },
-	['@text.warning'] = { fg = cp.base, bg = cp.yellow },
-	['@text.danger'] = { fg = cp.base, bg = cp.red },
+	['@text.todo'] = { fg = cp.yellow, style = { 'bold' } }, -- todo notes
+	['@text.note'] = { fg = cp.blue_0, style = { 'bold' } },
+	['@text.warning'] = { fg = cp.orange, style = { 'bold' } },
+	['@text.danger'] = { fg = cp.red, style = { 'bold' } },
 
 	['@text.diff.add'] = { link = 'diffAdd' }, -- added text (for diff files)
 	['@text.diff.delete'] = { link = 'diffDelete' }, -- deleted text (for diff files)
 
-	-- Tags
-	['@tag'] = { fg = cp.red_1 }, -- Tags like html tag names.
-	['@tag.attribute'] = { fg = cp.pink }, -- Tags like html tag names.
+	-- [ Tags HTML ]
+	['@tag'] = { fg = cp.red }, -- title, body, div, p, li, ul, lo, script...
+	['@tag.attribute'] = { fg = cp.pink, style = { 'italic' } }, -- href, id, class, rel, name, charset, lang
 	['@tag.delimiter'] = { fg = cp.red_1 }, -- Tag delimiter like < > /
-	['@constant.html'] = { fg = cp.teal_1 },
+	['@constant.html'] = { fg = cp.teal_1, style = { 'bold' } }, -- DOCTYPE html
 
-	-- Language specific:
-	-- markdown
-	['@conceal'] = { bold = true },
-	['@text.todo.unchecked'] = { bold = true, bg = 'None', fg = cp.whiteSmoke },
-	['@text.todo.checked'] = { bold = true, bg = 'None', fg = cp.yellow },
+	-- [ markdown }
+	['@label.markdown'] = { fg = cp.teal_1, style = { 'underline' } }, -- For labels: label: in C and :label: in Lua.
+	['@text.todo.unchecked'] = { fg = cp.yellow, bg = cp.mantle, style = { 'bold' } },
+	['@text.todo.checked'] = { fg = cp.mantle, bg = cp.yellow, style = { 'bold' } },
+	['@text.title.1.markdown'] = { fg = cp.red, style = { 'bold', 'underline' } },
+	['@text.title.2.markdown'] = { fg = cp.peach, style = { 'bold', 'underline' } },
+	['@text.title.3.markdown'] = { fg = cp.yellow, style = { 'bold', 'underline' } },
+	['@text.title.4.markdown'] = { fg = cp.green, style = { 'bold', 'underline' } },
+	['@text.title.5.markdown'] = { fg = cp.sapphire, style = { 'bold', 'underline' } },
+	['@text.title.6.markdown'] = { fg = cp.lavender, style = { 'bold', 'underline' } },
 
-	-- toml
-	['@property.toml'] = { fg = cp.red, bold = true }, -- Differentiates between string and properties
-
-	-- json
-	['@label.json'] = { fg = cp.blue_1 }, -- For labels: label: in C and :label: in Lua.
+	-- [ json ]
+	['@label.json'] = { fg = cp.blue_0 }, -- For labels: label: in C and :label: in Lua.
 	['@string.json'] = { fg = cp.text },
-	['@conceal.json'] = { fg = cp.green },
-	['@punctuation.delimiter.json'] = { fg = cp.red_1 }, -- For delimiters ie: .
+	['@punctuation.delimiter.json'] = { fg = cp.teal }, -- For delimiters ie: .
 
-	-- lua
-	['@constructor.lua'] = { fg = cp.flamingo }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
+	-- [ lua ]
+	['@constructor.lua'] = { fg = cp.yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
 
 	-- typescript
 	['@constructor.typescript'] = { fg = cp.lavender },
 
 	-- TSX (Typescript React)
-	['@keyword.export'] = { fg = cp.sky, bold = true },
 	['@constructor.tsx'] = { fg = cp.lavender },
 	['@tag.attribute.tsx'] = { fg = cp.mauve },
 
@@ -138,19 +134,19 @@ return {
 	['@property.cpp'] = { fg = cp.rosewater },
 	['@punctuation.delimiter.cpp'] = { fg = cp.text }, -- For delimiters ie: .
 
-	-- yaml
-	['@field.yaml'] = { fg = cp.blue }, -- For fields.
+	-- [ yaml ]
+	['@field.yaml'] = { fg = cp.blue_0 }, -- For fields.
 
 	-- Ruby
 	['@symbol.ruby'] = { fg = cp.flamingo },
 
-	-- from scss and css
+	-- [ from scss and css ]
 	['@string.scss'] = { fg = cp.text },
-	['@type.scss'] = { fg = cp.red_1 },
-	['@punctuation.delimiter.scss'] = { fg = 'None' },
-	['@function.scss'] = { fg = 'None' },
+	['@type.scss'] = { fg = cp.red },
+	['@punctuation.delimiter.scss'] = { fg = cp.blue_0 },
+	['@function.scss'] = { fg = cp.text },
 
-	['@type.css'] = { fg = cp.red_1 },
-	['@punctuation.delimiter.css'] = { fg = 'None' },
-	['@function.css'] = { fg = 'None' },
+	['@type.css'] = { fg = cp.red },
+	['@punctuation.delimiter.css'] = { fg = cp.blue_0 },
+	['@function.css'] = { fg = cp.text },
 }
