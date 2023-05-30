@@ -6,63 +6,97 @@
   Esquema de colores basado en <a href="https://github.com/catppuccin/catppuccin">catppuccin</a>.
 </p>
 
-<p align="center">
-  <img src="https://github.com/GabrielRIP/my-assets/blob/main/plugs-lua/theme-custom/image-1.png" alt="vista del thema">
-</p>
-<p align="center">
-  <img src="https://github.com/GabrielRIP/my-assets/blob/main/plugs-lua/theme-custom/image-2.png" alt="vista del thema">
-</p>
-<p align="center">
-  <img src="https://github.com/GabrielRIP/my-assets/blob/main/plugs-lua/theme-custom/image-3.png" alt="vista del thema">
-</p>
+<img src="https://github.com/GabrielRIP/my-assets/blob/main/plugs-lua/theme-custom/intro.png" alt="image intro"/>
+
+<details>
+    <summary>NvimTree</summary>
+    <img src="https://github.com/GabrielRIP/my-assets/blob/main/plugs-lua/theme-custom/nvim-tree.png" alt="image with nvim-tree"/>
+</details>
+
+<details>
+    <summary>Cmp nvim</summary>
+    <img src="https://github.com/GabrielRIP/my-assets/blob/main/plugs-lua/theme-custom/cmp.png" alt="image with cmp-nvim"/>
+</details>
+
+<details>
+    <summary>markdown file</summary>
+    <img src="https://github.com/GabrielRIP/my-assets/blob/main/plugs-lua/theme-custom/markdown.png" alt="image in markdown file"/>
+</details>
+
+<details>
+    <summary>json file</summary>
+    <img src="https://github.com/GabrielRIP/my-assets/blob/main/plugs-lua/theme-custom/json.png" alt="image in json file"/>
+</details>
 
 ### ¿Por que un nuevo esquema de colores?
 
 Por que quería el mio propio, mi propio patio de juegos de colores. Ademas de tantos temas; unos pueden gustar mas que otros, pero siempre hay cosas que te gustaría cambiar y adaptar a tu gusto.
 
-### Compatibilidad
-
-- nvim-cmp
-- lsp
-- barbar
-- gitsigns
-- indent_blankline
-- NvimTree
-- treesitter
-- [statusStatic](https://github.com/GabrielRIP/statusStatic)
-
 ## Uso
 
-con [Packer](https://github.com/wbthomason/packer.nvim)
+Con [Packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
-    'GabrielRIP/theme-custom',
+    'grChad/theme-custom',
     config = function()
         require('theme-nvim').load_theme()
     end,
 }
 ```
 
-Esto pintara los grupos destacados del `editor, sistaxis y gitsigns` y para los demás se carga de la siguiente manera:
+Con [Lazy](https://github.com/folke/lazy.nvim)
 
 ```lua
-  require('theme-nvim').load_highlight('indent_blank')
-
-  require("indent_blankline").setup {
-    -- code
-  }
+{
+    'grChad/theme-custom',
+    lazy = false,
+    priority = 1000, -- el tema tiene la prioridad mas alta.
+    config = function()
+        require('theme-nvim').load_theme()
+    end,
+}
 ```
 
-Llámalo al inicio de la configuración de tu plug; pero esta tiene que estar soportada por este tema.
+Esto pintara los siguientes grupos destacados automáticamente: `editor, sistaxis, gitsigns, cmp-nvim, lsp, mason, treesitter, NvimTree, indent_blankline, telescope y barbar`.
 
-Esta es la lista de los soportes que trae:
+Y para las siguientes extensiones: `dap, bufferline, hop, lightspeed, lsp_saga, lsp_trouble, navic, neotest, noice, notify, overseer, semantic_tokens, treesitter_context, ts_rainbow2, vimwiki y which_key`, siga las siguientes instrucciones.
+
+<details>
+    <summary>Ejemplo con Packer y con lsp-trouble</summary>
 
 ```lua
-require('theme-nvim').load_highlight('barbar')
-require('theme-nvim').load_highlight('cmp')
-require('theme-nvim').load_highlight('indent_blank')
-require('theme-nvim').load_highlight('lsp_native') -- desde lsp-config
-require('theme-nvim').load_highlight('nvimtree')
-require('theme-nvim').load_highlight('treesitter')
+use {
+    "folke/lsp-trouble.nvim",
+    config = function()
+        require('theme-nvim').load_highlight('lsp_trouble')
+        require("trouble").setup()
+    end
+}
+```
+
+</details>
+
+<details>
+    <summary>Ejemplo con Lazy y con lsp-trouble</summary>
+
+```lua
+{
+    "folke/lsp-trouble.nvim",
+    init = function()
+        require('theme-nvim').load_highlight('lsp_trouble')
+    end
+    opts = {}
+}
+```
+
+</details>
+
+Aquí dejo la lista completa de complementos que son compatibles y que tienes que agregar manualmente:
+
+```lua
+require('theme-nvim').load_highlight('bufferline')
+require('theme-nvim').load_highlight('dap')
+require('theme-nvim').load_highlight('hop')
+require('theme-nvim').load_highlight('lightspeed')
 ```
