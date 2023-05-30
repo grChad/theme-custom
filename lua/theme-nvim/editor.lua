@@ -28,7 +28,8 @@ return {
 	Normal = { fg = cp.text, bg = cp.base }, -- normal text
 	NormalNC = { fg = cp.text, bg = cp.base }, -- normal text in non-current windows
 	NormalSB = { fg = cp.text, bg = cp.crust }, -- normal text in non-current windows
-	NormalFloat = { fg = cp.text, bg = 'NONE' }, -- Normal text in floating windows.
+	-- NormalFloat = { fg = cp.text, bg = 'NONE' }, -- Normal text in floating windows.
+	NormalFloat = { fg = cp.text, bg = cp.mantle }, -- Normal text in floating windows.
 	FloatBorder = { fg = cp.blue_1 }, -- lo uso en [ cmp ]
 	Pmenu = { fg = cp.text, bg = cp.surface0 }, -- Popup menu: normal item.
 	PmenuSel = { fg = cp.dark, bg = cp.teal, style = { 'bold' } }, -- Popup menu: selected item.

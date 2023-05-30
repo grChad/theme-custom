@@ -1,8 +1,8 @@
 local cp = require('theme-nvim.palletes.frappe')
 
 return {
-	MasonHeader = { fg = cp.lavender, bg = 'NONE', style = { 'bold' } },
-	MasonHeaderSecondary = { fg = cp.blue_2, bg = 'NONE', style = { 'bold' } },
+	MasonHeader = { fg = cp.red_1, bg = cp.whiteSmoke, style = { 'bold' } },
+	-- MasonHeaderSecondary = { fg = cp.blue_2, bg = 'NONE', style = { 'bold',  } },
 
 	MasonHighlight = { fg = cp.green },
 	-- MasonHighlightBlock = { bg =  , fg = , },
@@ -18,5 +18,5 @@ return {
 
 	MasonError = { fg = cp.red },
 
-	MasonHeading = { fg = cp.lavender, style = { 'bold' } },
+	MasonHeading = { fg = cp.red_1, bg = cp.base, style = { 'bold' } }, -- h2,
 }

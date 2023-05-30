@@ -51,7 +51,7 @@ return {
 	mkdCodeDelimiter = { bg = cp.base, fg = cp.text },
 	mkdCodeStart = { fg = cp.flamingo, style = { 'bold' } },
 	mkdCodeEnd = { fg = cp.flamingo, style = { 'bold' } },
-	-- mkdLink = {},
+	mkdLink = { fg = cp.blue_1, style = { 'underline' } },
 
 	-- debugging
 	debugPC = { bg = cp.crust }, -- used for highlighting the current line in terminal-debug
