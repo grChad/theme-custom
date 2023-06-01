@@ -1,6 +1,6 @@
 local cp = require('theme-nvim.palletes.frappe')
 return {
-	NvimTreeRootFolder = { fg = cp.red_1, bg = cp.whiteSmoke, style = { 'bold' } },
+	NvimTreeRootFolder = { fg = cp.dark, bg = cp.blue_1, style = { 'bold' } },
 
 	NvimTreeFolderName = { fg = cp.gold },
 	NvimTreeFolderIcon = { fg = cp.gold },
