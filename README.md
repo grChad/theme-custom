@@ -58,33 +58,39 @@ Con [Lazy](https://github.com/folke/lazy.nvim)
 }
 ```
 
-Esto pintara los siguientes grupos destacados automáticamente: `editor, sistaxis, gitsigns, cmp-nvim, lsp, mason, lazy, treesitter, NvimTree, indent_blankline, telescope y barbar`.
+Esto pintara los siguientes grupos destacados automáticamente: `editor, sistaxis, gitsigns, cmp-nvim, lsp, mason, treesitter, NvimTree, mini.indentscope, indent_blankline, lazy, telescope y barbar`.
 
-Y para las siguientes extensiones: `dap, bufferline, hop, lightspeed, lsp_saga, lsp_trouble, navic, neotest, noice, notify, overseer, semantic_tokens, treesitter_context, ts_rainbow2, vimwiki y which_key`, siga las siguientes instrucciones.
+Y para las siguientes extensiones: `dap, bufferline, hop, lightspeed, ts_rainbow2`, siga las siguientes instrucciones.
 
-<details>
-    <summary>Ejemplo con Packer y con lsp-trouble</summary>
+<!-- <details> -->
+
+    <summary>Ejemplo con Packer y con bufferline</summary>
 
 ```lua
+
 use {
-    "folke/lsp-trouble.nvim",
+    'akinsho/bufferline.nvim',
+    tag = "*",
+    requires = 'nvim-tree/nvim-web-devicons',
     config = function()
-        require('theme-nvim').load_highlight('lsp_trouble')
-        require("trouble").setup()
+        require('theme-nvim').load_highlight('bufferline')
+        -- config bufferline
     end
 }
 ```
 
-</details>
+<!-- </details> -->
 
 <details>
-    <summary>Ejemplo con Lazy y con lsp-trouble</summary>
+    <summary>Ejemplo con Lazy y con bufferline</summary>
 
 ```lua
 {
-    "folke/lsp-trouble.nvim",
+    'akinsho/bufferline.nvim',
+    version = "*",
+    dependencies = 'nvim-tree/nvim-web-devicons',
     init = function()
-        require('theme-nvim').load_highlight('lsp_trouble')
+        require('theme-nvim').load_highlight('bufferline')
     end
     opts = {}
 }
@@ -95,8 +101,11 @@ use {
 Aquí dejo la lista completa de complementos que son compatibles y que tienes que agregar manualmente:
 
 ```lua
-require('theme-nvim').load_highlight('bufferline')
 require('theme-nvim').load_highlight('dap')
+require('theme-nvim').load_highlight('bufferline')
 require('theme-nvim').load_highlight('hop')
 require('theme-nvim').load_highlight('lightspeed')
+require('theme-nvim').load_highlight('rainbow2')
 ```
+
+Mas adelante puedo agregar compatibilidad para otros complementos.
