@@ -62,12 +62,10 @@ Esto pintara los siguientes grupos destacados automáticamente: `editor, sistaxi
 
 Y para las siguientes extensiones: `dap, bufferline, hop, lightspeed, ts_rainbow2`, siga las siguientes instrucciones.
 
-<!-- <details> -->
-
-    <summary>Ejemplo con Packer y con bufferline</summary>
+<details>
+    <summary>Ejemplo con Packer y con <i>bufferline</i></summary>
 
 ```lua
-
 use {
     'akinsho/bufferline.nvim',
     tag = "*",
@@ -79,10 +77,10 @@ use {
 }
 ```
 
-<!-- </details> -->
+</details>
 
 <details>
-    <summary>Ejemplo con Lazy y con bufferline</summary>
+    <summary>Ejemplo con Lazy y con <i>bufferline</i></summary>
 
 ```lua
 {
