@@ -58,7 +58,7 @@ Con [Lazy](https://github.com/folke/lazy.nvim)
 }
 ```
 
-Esto pintara los siguientes grupos destacados automáticamente: `editor, sistaxis, gitsigns, cmp-nvim, lsp, mason, treesitter, NvimTree, mini.indentscope, indent_blankline, lazy, telescope y barbar`.
+Esto pintara los siguientes grupos destacados automáticamente: `editor, sistaxis, gitsigns, cmp-nvim, lsp, mason, treesitter, NvimTree, mini.indentscope, indent_blankline, lazy, telescope y barbar` y [statusStatic](https://github.com/grChad/statusStatic).
 
 Y para las siguientes extensiones: `dap, bufferline, hop, lightspeed, ts_rainbow2`, siga las siguientes instrucciones.
 
