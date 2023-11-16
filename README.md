@@ -58,9 +58,9 @@ Con [Lazy](https://github.com/folke/lazy.nvim)
 }
 ```
 
-Esto pintara los siguientes grupos destacados automáticamente: `editor, sistaxis, gitsigns, cmp-nvim, lsp, mason, treesitter, NvimTree, mini.indentscope, indent_blankline, lazy, telescope y barbar` y [statusStatic](https://github.com/grChad/statusStatic).
+Esto pintara los siguientes grupos destacados automáticamente: `editor, sistaxis, gitsigns, cmp-nvim, lsp, mason, treesitter, NvimTree, indent_blankline, lazy, telescope y barbar` y [statusStatic](https://github.com/grChad/statusStatic).
 
-Y para las siguientes extensiones: `dap, bufferline, hop, lightspeed, ts_rainbow2`, siga las siguientes instrucciones.
+Y para las siguientes extensiones: `dap, bufferline, hop, lightspeed, ts_rainbow2, indent_mini`, siga las siguientes instrucciones.
 
 <details>
     <summary>Ejemplo con Packer y con <i>bufferline</i></summary>
@@ -104,6 +104,7 @@ require('theme-nvim').load_highlight('bufferline')
 require('theme-nvim').load_highlight('hop')
 require('theme-nvim').load_highlight('lightspeed')
 require('theme-nvim').load_highlight('rainbow2')
+require('theme-nvim').load_highlight('indent_mini')
 ```
 
 Mas adelante puedo agregar compatibilidad para otros complementos.
