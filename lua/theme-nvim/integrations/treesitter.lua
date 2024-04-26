@@ -2,7 +2,7 @@ local cp = require('theme-nvim.palletes.frappe')
 
 local operators = cp.sky
 local cl = cp.mauve -- conditionals, loops
-local math_logic = cp.peach
+local the_numbers = cp.gold
 
 return {
 	-- Misc
@@ -20,8 +20,8 @@ return {
 	['@character.special'] = { link = 'SpecialChar' }, -- special characters (e.g. wildcards)
 
 	['@boolean'] = { fg = cp.orange_1, style = { 'italic' } }, -- For booleans.
-	['@number'] = { fg = math_logic }, -- For all numbers
-	['@float'] = { fg = math_logic }, -- For floats.
+	['@number'] = { fg = the_numbers }, -- For all numbers
+	['@float'] = { fg = the_numbers }, -- For floats.
 
 	-- Functions
 	['@function'] = { fg = cp.blue_1 }, -- For function (calls and definitions).

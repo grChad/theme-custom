@@ -5,8 +5,8 @@ return {
 	Constant = { fg = cp.peach }, -- (preferred) any constant
 	String = { fg = cp.green }, -- a string constant: "this is a string"
 	Character = { fg = cp.teal }, --  a character constant: 'c', '\n'
-	Number = { fg = cp.peach }, --   a number constant: 234, 0xff
-	Float = { fg = cp.peach }, --    a floating point constant: 2.3e10
+	Number = { fg = cp.gold }, --   a number constant: 234, 0xff
+	Float = { fg = cp.gold }, --    a floating point constant: 2.3e10
 	Boolean = { fg = cp.red, style = { 'italic', 'bold' } },
 	Identifier = { fg = cp.flamingo }, -- (preferred) any variable name
 	Function = { fg = cp.blue }, -- function name (also: methods for classes)
