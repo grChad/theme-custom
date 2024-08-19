@@ -26,7 +26,7 @@ return {
 	MoreMsg = { fg = cp.blue_1 }, -- |more-prompt|
 	NonText = { fg = cp.overlay0 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 	Normal = { fg = cp.text, bg = cp.base }, -- normal text
-	NormalNC = { fg = cp.text, bg = cp.base }, -- normal text in non-current windows
+	NormalNC = { fg = cp.text, bg = cp.mantle }, -- normal text in non-current windows
 	NormalSB = { fg = cp.text, bg = cp.crust }, -- normal text in non-current windows
 	-- NormalFloat = { fg = cp.text, bg = 'NONE' }, -- Normal text in floating windows.
 	NormalFloat = { fg = cp.text, bg = cp.mantle }, -- Normal text in floating windows.

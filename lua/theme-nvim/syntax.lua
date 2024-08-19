@@ -15,7 +15,7 @@ return {
 	Repeat = { fg = cp.red }, --   for, do, while, etcp.
 	Label = { fg = cp.peach }, --    case, default, etcp.
 	Operator = { fg = cp.sky }, -- "sizeof", "+", "*", etcp.
-	Keyword = { fg = cp.pink }, --  any other keyword
+	Keyword = { fg = cp.pink_1 }, --  any other keyword
 	-- Exception     = { }, --  try, catch, throw
 
 	PreProc = { fg = cp.pink }, -- (preferred) generic Preprocessor
@@ -109,4 +109,5 @@ return {
 	zshSubst = { fg = cp.blue_0 },
 	zshDeref = { fg = cp.blue_1 },
 	zshShortDeref = { fg = cp.blue_1 },
+	zshTypes = { fg = cp.mauve },
 }

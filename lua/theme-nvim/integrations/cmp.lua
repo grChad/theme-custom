@@ -35,4 +35,5 @@ return {
 	CmpItemKindTypeParameter = { fg = cp.white, style = { 'italic' } },
 	CmpItemKindCopilot = { fg = cp.teal_1 },
 	CmpItemKindCodeium = { fg = cp.teal_1 },
+	CmpItemKindSupermaven = { fg = '#6CC644', bg = cp.mantle },
 }
