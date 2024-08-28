@@ -1,11 +1,11 @@
 local cp = require('theme-nvim.palletes.frappe')
 return {
-	CmpItemAbbr = { fg = cp.overlay2 },
+	CmpItemAbbr = { fg = cp.subtext1 },
 	CmpItemAbbrDeprecated = { fg = cp.overlay0, style = { 'strikethrough' } },
 	CmpItemKind = { fg = cp.blue_0 },
 	CmpItemMenu = { fg = cp.text },
-	CmpItemAbbrMatch = { fg = cp.blue_1, style = { 'bold' } },
-	CmpItemAbbrMatchFuzzy = { fg = cp.blue_0 },
+	CmpItemAbbrMatch = { fg = cp.blue_0, style = { 'bold' } },
+	CmpItemAbbrMatchFuzzy = { fg = cp.blue_0, sp = cp.blue_0, style = { 'underline' } },
 
 	-- kind support
 	CmpItemKindSnippet = { fg = cp.pink },

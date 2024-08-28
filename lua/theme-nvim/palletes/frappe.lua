@@ -41,18 +41,6 @@ local color_palette = {
 	mantle = '#292C3C',
 	crust = '#232634',
 	dark = '#181818',
-
-	-- Unix
-	fedora = '#51A2DA',
-	debian = '#A80030',
-	arch = '#0F94D2',
-	ubuntu = '#E95420',
-	manjaro = '#35BF5C',
-	linuxmint = '#69B63D',
-	pop = '#46B3C1',
-	zorin = '#14A1E8',
-	cereus = '#4e965c',
-	git = '#FB7D68',
 }
 
 return color_palette
