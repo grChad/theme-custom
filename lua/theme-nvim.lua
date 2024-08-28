@@ -36,7 +36,7 @@ M.load_theme = function()
 	M.load_highlight('syntax', true)
 	--
 	M.load_highlight('gitsigns')
-	M.load_highlight('statusStatic') -- custom plugin
+	M.load_highlight('statusbar') -- custom plugin
 	M.load_highlight('cmp')
 	M.load_highlight('lsp_native')
 	M.load_highlight('mason')
