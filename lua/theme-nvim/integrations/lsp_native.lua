@@ -8,13 +8,13 @@ return {
 	-- These groups are for the native LSP cliencp. Some other LSP clients may
 	-- use these groups, or use their own. Consult your LSP client's
 	-- documentation.
-	LspReferenceText = { sp = cp.subtext0, style = { 'underline' } }, -- used for highlighting "text" references
-	LspReferenceRead = { sp = cp.subtext0, style = { 'underline' } }, -- used for highlighting "read" references
-	LspReferenceWrite = { sp = cp.subtext0, style = { 'underline' } }, -- used for highlighting "write" references
+	LspReferenceText = { bg = cp.surface1 }, --  "text" references
+	LspReferenceRead = { bg = cp.surface1 }, --  "read" references
+	LspReferenceWrite = { bg = cp.surface1 }, -- "write" references
 	-- hightlight diagnostics in numberline
 
 	DiagnosticUnnecessary = { fg = cp.subtext0 },
-	LspInlayHint = { fg = cp.subtext0, bg = cp.mantle },
+	LspInlayHint = { fg = cp.overlay1, bg = cp.surface0 },
 
 	DiagnosticVirtualTextError = { fg = error, style = { 'italic' } }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
 	DiagnosticVirtualTextWarn = { fg = warning, style = { 'italic' } }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default

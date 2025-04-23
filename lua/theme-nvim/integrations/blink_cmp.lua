@@ -1,0 +1,33 @@
+local cp = require('theme-nvim.palletes.frappe')
+
+return {
+	BlinkCmpLabel = { fg = cp.overlay2 },
+	BlinkCmpLabelDeprecated = { fg = cp.overlay0, style = { 'strikethrough' } },
+
+	BlinkCmpLabelMatch = { fg = cp.text, style = { 'bold' } },
+	BlinkCmpKindText = { fg = cp.green },
+	BlinkCmpKindMethod = { fg = cp.blue },
+	BlinkCmpKindFunction = { fg = cp.blue },
+	BlinkCmpKindConstructor = { fg = cp.blue },
+	BlinkCmpKindField = { fg = cp.green },
+	BlinkCmpKindVariable = { fg = cp.flamingo },
+	BlinkCmpKindClass = { fg = cp.yellow },
+	BlinkCmpKindInterface = { fg = cp.yellow },
+	BlinkCmpKindModule = { fg = cp.blue },
+	BlinkCmpKindProperty = { fg = cp.blue },
+	BlinkCmpKindUnit = { fg = cp.green },
+	BlinkCmpKindValue = { fg = cp.peach },
+	BlinkCmpKindEnum = { fg = cp.yellow },
+	BlinkCmpKindKeyword = { fg = cp.mauve },
+	BlinkCmpKindSnippet = { fg = cp.flamingo },
+	BlinkCmpKindColor = { fg = cp.red },
+	BlinkCmpKindFile = { fg = cp.blue },
+	BlinkCmpKindReference = { fg = cp.red },
+	BlinkCmpKindFolder = { fg = cp.blue },
+	BlinkCmpKindEnumMember = { fg = cp.teal },
+	BlinkCmpKindConstant = { fg = cp.peach },
+	BlinkCmpKindStruct = { fg = cp.blue },
+	BlinkCmpKindEvent = { fg = cp.blue },
+	BlinkCmpKindOperator = { fg = cp.sky },
+	BlinkCmpKindTypeParameter = { fg = cp.maroon },
+}

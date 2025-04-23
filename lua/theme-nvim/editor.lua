@@ -1,5 +1,4 @@
 local cp = require('theme-nvim.palletes.frappe')
-local float_selected = '#1A5E96'
 
 return {
 	ColorColumn = { bg = cp.surface0 }, -- used for the columns set with 'colorcolumn'
@@ -30,13 +29,13 @@ return {
 	NormalNC = { fg = cp.text, bg = cp.mantle }, -- normal text in non-current windows
 	NormalSB = { fg = cp.text, bg = cp.crust }, -- normal text in non-current windows
 	NormalFloat = { fg = cp.text, bg = cp.crust }, -- Normal text in floating windows.
-	NormalFloatSelect = { bg = float_selected },
+	NormalFloatSelect = { bg = cp.selected },
 	-- NormalFloat = { bg = cp.mantle }, -- Normal text in floating windows.
 	FloatBorder = { fg = cp.blue_1, bg = cp.crust }, -- lo uso en [ cmp ]
-	Pmenu = { fg = cp.text, bg = cp.mantle }, -- Popup menu: normal item.
-	PmenuSel = { fg = cp.dark, bg = cp.blue_0, style = { 'bold' } }, -- Popup menu: selected item.
-	PmenuSbar = { bg = cp.blue_0 }, -- Popup menu: scrollbar.
-	PmenuThumb = { bg = cp.blue_0 }, -- Popup menu: Thumb of the scrollbar.
+	Pmenu = { bg = cp.surface0 }, -- Popup menu: normal item.
+	PmenuSel = { bg = cp.selected }, -- Popup menu: selected item.
+	PmenuSbar = { bg = cp.surface1 }, -- Popup menu: scrollbar.
+	PmenuThumb = { bg = cp.blue_2 }, -- Popup menu: Thumb of the scrollbar.
 	Question = { fg = cp.blue_1 }, -- |hit-enter| prompt and yes/no questions
 	QuickFixLine = { bg = cp.surface1, style = { 'bold' } }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
 	Search = { fg = cp.base, bg = cp.yellow }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand oucp.

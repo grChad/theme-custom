@@ -83,7 +83,7 @@ return {
 	['@string.regex'] = { fg = cp.green_1 }, -- For regexes.
 	['@string.escape'] = { fg = cp.green_1, style = { 'bold' } }, -- For escape characters within a string.
 	['@string.special'] = { fg = cp.blue_0 }, -- other special strings (e.g. dates)
-	['@string.special.url'] = { fg = cp.blue_1, style = { 'italic', 'underline' } }, -- other special strings (e.g. dates)
+	['@string.special.url'] = { fg = cp.blue_1, style = { 'italic', 'undercurl' } }, -- other special strings (e.g. dates)
 
 	-- [ Text ]
 	['@text'] = { fg = cp.text }, -- For strings considerated text in a markup language.
@@ -113,14 +113,14 @@ return {
 	['@tag.attribute'] = { fg = cp.pink, style = { 'italic' } }, -- href, id, class, rel, name, charset, lang
 	['@tag.delimiter'] = { fg = cp.red_1 }, -- Tag delimiter like < > /
 	['@constant.html'] = { fg = cp.teal_1, style = { 'bold' } }, -- DOCTYPE html
-	['@markup.heading.html'] = { fg = cp.mantle, bg = cp.blue_1, style = { 'bold' } }, -- titles for output from ":set all", ":autocmd" etcp.
+	['@markup.heading.html'] = { fg = cp.blue_1, style = { 'bold' } }, -- titles for output from ":set all", ":autocmd" etcp.
 	['@markup.heading.1.html'] = { fg = cp.whiteSmoke, style = { 'bold' } }, -- titles for output from ":set all", ":autocmd" etcp.
 	['@markup.heading.2.html'] = { fg = cp.whiteSmoke, style = { 'bold' } }, -- titles for output from ":set all", ":autocmd" etcp.
 	['@markup.heading.3.html'] = { fg = cp.whiteSmoke, style = { 'bold' } }, -- titles for output from ":set all", ":autocmd" etcp.
 	['@markup.heading.4.html'] = { fg = cp.whiteSmoke, style = { 'bold' } }, -- titles for output from ":set all", ":autocmd" etcp.
 	['@markup.heading.5.html'] = { fg = cp.whiteSmoke, style = { 'bold' } }, -- titles for output from ":set all", ":autocmd" etcp.
 	['@markup.heading.6.html'] = { fg = cp.whiteSmoke, style = { 'bold' } }, -- titles for output from ":set all", ":autocmd" etcp.
-	['@string.special.url.html'] = { fg = cp.green, style = { 'italic', 'underline' } },
+	['@string.special.url.html'] = { fg = cp.green, style = { 'italic', 'undercurl' } },
 	['@markup.link.label.html'] = { fg = cp.blue_2, style = { 'italic' } },
 
 	-- [ Markdown }
@@ -157,7 +157,8 @@ return {
 	['@constructor.tsx'] = { fg = cp.lavender },
 	['@tag.tsx'] = { fg = cp.yellow },
 	['@tag.builtin.tsx'] = { fg = cp.red },
-	['@string.special.url.tsx'] = { fg = cp.green, style = { 'underline' } },
+	['@string.special.url.tsx'] = { fg = cp.green, style = { 'undercurl' } },
+	['@string.special.url.ts'] = { fg = cp.green, style = { 'undercurl' } },
 	['@tag.attribute.tsx'] = { fg = cp.flamingo, style = { 'italic' } },
 	['@markup.heading.1.tsx'] = { fg = 'NONE' },
 	['@markup.heading.2.tsx'] = { fg = 'NONE' },

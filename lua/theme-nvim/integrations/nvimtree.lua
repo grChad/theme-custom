@@ -20,7 +20,7 @@ return {
 	NvimTreeImageFile = { fg = cp.mauve },
 	NvimTreeOpenedFile = { fg = cp.blue_1, style = { 'bold' } },
 
-	NvimTreeCursorLine = { bg = cp.surface0 },
+	NvimTreeCursorLine = { bg = cp.selected },
 	NvimTreeWinSeparator = { fg = cp.blue_2 },
 
 	NvimTreeLspDiagnosticsError = { fg = cp.red, bg = cp.mantle },

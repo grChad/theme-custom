@@ -37,6 +37,7 @@ M.load_theme = function()
 	--
 	M.load_highlight('gitsigns')
 	M.load_highlight('cmp')
+	M.load_highlight('blink_cmp')
 	M.load_highlight('lsp_native')
 	M.load_highlight('mason')
 	M.load_highlight('treesitter')
@@ -46,9 +47,12 @@ M.load_theme = function()
 	M.load_highlight('lazy')
 	M.load_highlight('telescope')
 	M.load_highlight('barbar')
+	M.load_highlight('bufferline')
 	M.load_highlight('headlines') -- markdown
 	M.load_highlight('noice')
 	M.load_highlight('others')
 end
+
+M.pallete = require('theme-nvim.palletes.frappe')
 
 return M
